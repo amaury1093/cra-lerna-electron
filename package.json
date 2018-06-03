@@ -9,7 +9,7 @@
   "homepage": "https://github.com/amaurymartiny/cra-lerna-electron",
   "private": true,
   "scripts": {
-    "build": "npm-run-all -p -l build:*",
+    "build": "npm-run-all -l build:react build:electron",
     "build:electron": "cd packages/crale-electron && npm run build && cd -",
     "build:react": "cd packages/crale-react && npm run build && cd -",
     "preelectron": "npm run build",
