@@ -1,0 +1,23 @@
+{
+  "name": "crale-react",
+  "version": "0.1.0",
+  "description": "Create-React-App + Lerna + Electron starter kit.",
+  "author": {
+    "email": "amaury.martiny@protonmail.com",
+    "name": "Amaury Martiny"
+  },
+  "homepage": "https://github.com/amaurymartiny/cra-lerna-electron",
+  "private": true,
+  "scripts": {
+    "build": "react-scripts build",
+    "lint": "eslint src",
+    "start": "react-scripts start",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  },
+  "dependencies": {
+    "react": "^16.4.0",
+    "react-dom": "^16.4.0",
+    "react-scripts": "1.1.4"
+  }
+}
