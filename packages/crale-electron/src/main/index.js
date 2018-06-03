@@ -1,9 +1,11 @@
 import { app, BrowserWindow } from 'electron';
+import path from 'path';
+import url from 'url';
 
 // Global reference to mainWindow (necessary to prevent window from being garbage collected)
 let mainWindow;
 
-const createWindow = () => {
+const createMainWindow = () => {
   // Create the browser window.
   mainWindow = new BrowserWindow({ width: 800, height: 600 });
 
@@ -12,15 +14,7 @@ const createWindow = () => {
   mainWindow.loadURL(
     process.env.ELECTRON_START_URL ||
       url.format({
-        pathname: path.join(
-          __dirname,
-          '..',
-          '..',
-          '..',
-          'crale-react',
-          'build',
-          'index.html'
-        ),
+        pathname: path.join(__static, 'index.html'),
         protocol: 'file:',
         slashes: true
       })

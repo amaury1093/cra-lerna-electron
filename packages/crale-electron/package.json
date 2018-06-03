@@ -27,6 +27,6 @@
     "webpack": "^4.9.1"
   },
   "resolutions": {
-    "webpack-sources": "1.0.1"
+    "webpack-sources": "^1.1.0"
   }
 }

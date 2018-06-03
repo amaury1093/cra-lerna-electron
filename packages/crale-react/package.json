@@ -6,7 +6,7 @@
     "email": "amaury.martiny@protonmail.com",
     "name": "Amaury Martiny"
   },
-  "homepage": "https://github.com/amaurymartiny/cra-lerna-electron",
+  "homepage": "./",
   "private": true,
   "scripts": {
     "build": "react-scripts build",

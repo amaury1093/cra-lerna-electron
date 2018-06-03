@@ -4,6 +4,6 @@
   "packages": [
     "packages/*"
   ],
-  "useWorkspaces": true,
+  "useWorkspaces": false,
   "version": "0.1.0"
 }
