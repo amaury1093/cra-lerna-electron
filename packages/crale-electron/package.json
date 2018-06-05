@@ -9,6 +9,7 @@
   "homepage": "https://github.com/amaurymartiny/cra-lerna-electron",
   "private": true,
   "scripts": {
+    "prebuild": "cp -r ../crale-react/build static/build",
     "build": "electron-webpack",
     "electron": "electron dist/main/main.js",
     "lint": "echo Please add your favorite linter here.",

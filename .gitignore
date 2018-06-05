@@ -9,6 +9,7 @@ coverage
 # production
 build
 dist
+packages/crale-electron/static/build
 
 # misc
 .DS_Store

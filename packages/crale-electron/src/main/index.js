@@ -14,7 +14,7 @@ const createMainWindow = () => {
   mainWindow.loadURL(
     process.env.ELECTRON_START_URL ||
       url.format({
-        pathname: path.join(__static, 'index.html'),
+        pathname: path.join(__static, 'build', 'index.html'),
         protocol: 'file:',
         slashes: true
       })
