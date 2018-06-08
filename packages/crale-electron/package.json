@@ -13,7 +13,7 @@
     "build": "electron-webpack",
     "electron": "electron dist/main/main.js",
     "lint": "echo Please add your favorite linter here.",
-    "release": "electron-builder",
+    "package": "electron-builder",
     "start": "cross-env ELECTRON_START_URL=http://localhost:3000 electron-webpack dev",
     "test": "echo Skipped."
   },
