@@ -24,7 +24,7 @@
     "start:react": "cd packages/crale-react && npm run startt",
     "test": "npm-run-all -l test:*",
     "test:electron": "cd packages/crale-electron && npm run test",
-    "test:react": "cd packages/crale-react && npm run test"
+    "test:react": "cd packages/crale-react && npm run test -- --coverage"
   },
   "devDependencies": {
     "lerna": "^2.11.0",

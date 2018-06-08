@@ -45,7 +45,7 @@ All these commands should be run from the project root.
 | `yarn start`    | Run Electron and React in dev mode, with live reload on file changes. Allows fast iterations. |
 | `yarn build`    | Build Electron and React.                                                                     |
 | `yarn electron` | Build Electron and React, and open Electron with these built files.                           |
-| `yarn release`  | Build Electron and React, and generate binaries with these built files.                       |
+| `yarn package`  | Build Electron and React, and generate binaries with these built files.                       |
 | `yarn lint`     | Check for linting issues in the code.                                                         |
 | `yarn test`     | Run tests.                                                                                    |
 
