@@ -19,6 +19,7 @@
     "test": "echo Skipped."
   },
   "dependencies": {
+    "axios": "^0.18.0",
     "crale-react": "^0.1.0",
     "source-map-support": "^0.5.6"
   },

@@ -2,6 +2,9 @@ import { app, BrowserWindow } from 'electron';
 import path from 'path';
 import url from 'url';
 
+// Try removing this line, and `yarn package` works
+import axios from 'axios';
+
 // Global reference to mainWindow (necessary to prevent window from being garbage collected)
 let mainWindow;
 
