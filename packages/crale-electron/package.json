@@ -9,18 +9,21 @@
   "homepage": "https://github.com/amaurymartiny/cra-lerna-electron",
   "private": true,
   "scripts": {
-    "prebuild": "cp -r ../crale-react/build static/build",
+    "prebuild": "copyfiles -u 2 \"../crale-react/build/**/*\" static/ && ./scripts/fixElectronBug.sh",
     "build": "electron-webpack",
     "electron": "electron dist/main/main.js",
     "lint": "echo Please add your favorite linter here.",
     "package": "electron-builder",
+    "release": "electron-builder",
     "start": "cross-env ELECTRON_START_URL=http://localhost:3000 electron-webpack dev",
     "test": "echo Skipped."
   },
   "dependencies": {
+    "crale-react": "^0.1.0",
     "source-map-support": "^0.5.6"
   },
   "devDependencies": {
+    "copyfiles": "^2.0.0",
     "cross-env": "^5.1.6",
     "electron": "^2.0.2",
     "electron-builder": "^20.15.1",
