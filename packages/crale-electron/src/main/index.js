@@ -2,8 +2,7 @@ import { app, BrowserWindow } from 'electron';
 import path from 'path';
 import url from 'url';
 
-// Try removing this line, and `yarn package` works
-import axios from 'axios';
+import staticPath from './utils/staticPath';
 
 // Global reference to mainWindow (necessary to prevent window from being garbage collected)
 let mainWindow;
@@ -17,7 +16,7 @@ const createMainWindow = () => {
   mainWindow.loadURL(
     process.env.ELECTRON_START_URL ||
       url.format({
-        pathname: path.join(__static, 'build', 'index.html'),
+        pathname: path.join(staticPath, 'build', 'index.html'),
         protocol: 'file:',
         slashes: true
       })

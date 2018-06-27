@@ -12,14 +12,12 @@
     "prebuild": "copyfiles -u 2 \"../crale-react/build/**/*\" static/ && ./scripts/fixElectronBug.sh",
     "build": "electron-webpack",
     "electron": "electron dist/main/main.js",
-    "lint": "echo Please add your favorite linter here.",
+    "prepackage": "./scripts/revertElectronBug.sh",
     "package": "electron-builder",
-    "release": "electron-builder",
     "start": "cross-env ELECTRON_START_URL=http://localhost:3000 electron-webpack dev",
     "test": "echo Skipped."
   },
   "dependencies": {
-    "axios": "^0.18.0",
     "crale-react": "^0.1.0",
     "source-map-support": "^0.5.6"
   },

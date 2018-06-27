@@ -13,6 +13,8 @@
       "packages/*"
     ],
     "nohoist": [
+      "**/electron-builder",
+      "**/electron-builder/**",
       "**/electron-webpack",
       "**/electron-webpack/**"
     ]
@@ -21,21 +23,16 @@
     "yarn": "^1.4.2"
   },
   "scripts": {
-    "build": "lerna run build",
-    "preelectron": "npm run build",
-    "electron": "cd packages/crale-electron && npm run electron",
-    "lint": "lerna run lint -p",
-    "prepackage": "npm run build",
-    "package": "cd packages/crale-electron && npm run package",
-    "prerelease": "npm run build",
-    "release": "cd packages/crale-electron && npm run release",
-    "start": "npm-run-all -p -l start:*",
-    "start:electron": "cd packages/crale-electron && npm run start",
-    "start:react": "cd packages/crale-react && npm run start",
-    "test": "lerna run test -p"
+    "build": "lerna run build --stream",
+    "preelectron": "yarn build",
+    "electron": "lerna run electron --scope crale-electron",
+    "lint": "echo Put your favorite linter here.",
+    "prepackage": "yarn build",
+    "package": "lerna run package --scope crale-electron --stream",
+    "start": "lerna exec --parallel --stream yarn start",
+    "test": "lerna run test --parallel"
   },
   "devDependencies": {
-    "lerna": "^2.11.0",
-    "npm-run-all": "^4.1.3"
+    "lerna": "^2.11.0"
   }
 }

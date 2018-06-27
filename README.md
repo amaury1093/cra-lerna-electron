@@ -10,7 +10,7 @@ git clone https://github.com/amaurymartiny/cra-lerna-electron my-app
 cd my-app
 
 # Bootstrap the Lerna project, will install all modules
-lerna bootstrap
+yarn install
 ```
 
 ## Folder structure
@@ -23,7 +23,7 @@ The main idea of this starer kit is to separate the Electron and React parts.
 ├── package.json                  # Package.json for the whole repo
 ├── packages/
 │   ├── crale-electron/
-│   │   ├── electron-build.json   # Config for electron-build
+│   │   ├── electron-builder.json # Config for electron-build
 │   │   ├── electron-webpack.json # Config for electron-webpack
 │   │   ├── dist/                 # Binaries bundles by electron-builder
 │   │   ├── package.json
