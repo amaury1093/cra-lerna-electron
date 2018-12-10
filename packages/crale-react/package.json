@@ -9,14 +9,23 @@
   "homepage": "./",
   "private": true,
   "scripts": {
+    "start": "BROWSER=none react-scripts start",
     "build": "react-scripts build",
-    "start": "react-scripts start",
-    "test": "react-scripts test --env=jsdom --coverage",
+    "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
   "dependencies": {
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "react-scripts": "1.1.4"
-  }
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-scripts": "2.1.1"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }
