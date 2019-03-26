@@ -1,11 +1,8 @@
 {
   "name": "crale-electron",
   "version": "0.1.0",
-  "description": "Create-React-App + Lerna + Electron starter kit.",
-  "author": {
-    "email": "amaury.martiny@protonmail.com",
-    "name": "Amaury Martiny"
-  },
+  "description": "Minimal starter kit: Create-React-App + Lerna + Electron starter kit",
+  "author": "Amaury Martiny <amaury.martiny@protonmail.com>",
   "homepage": "https://github.com/amaurymartiny/cra-lerna-electron",
   "private": true,
   "scripts": {
@@ -18,16 +15,16 @@
     "test": "echo Skipped."
   },
   "dependencies": {
-    "crale-react": "^0.1.0",
-    "source-map-support": "^0.5.9"
+    "source-map-support": "^0.5.11"
   },
   "devDependencies": {
     "copyfiles": "^2.1.0",
+    "crale-react": "^0.1.0",
     "cross-env": "^5.2.0",
-    "electron": "^3.0.10",
-    "electron-builder": "^20.38.2",
-    "electron-webpack": "^2.6.1",
-    "webpack": "^4.27.1"
+    "electron": "^4.1.1",
+    "electron-builder": "^20.39.0",
+    "electron-webpack": "^2.6.2",
+    "webpack": "^4.29.6"
   },
   "resolutions": {
     "webpack-sources": "^1.1.0"
