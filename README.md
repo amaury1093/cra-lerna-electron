@@ -1,6 +1,6 @@
 # cra-lerna-electron
 
-[`create-react-app`](https://github.com/facebook/create-react-app) + [`Lerna`](https://github.com/lerna/lerna) + [`Electron`](https://github.com/electron/electron) starter kit.
+Minimal starter kit: ⚛️ [`create-react-app`](https://github.com/facebook/create-react-app) + 🐉 [`Lerna`](https://github.com/lerna/lerna) + :electron: [`Electron`](https://github.com/electron/electron)
 
 ## Getting Started
 
