@@ -30,6 +30,7 @@
     "test": "lerna run test --parallel"
   },
   "devDependencies": {
-    "lerna": "^3.13.1"
+    "lerna": "^3.13.1",
+    "typescript": "^3.3.4000"
   }
 }
