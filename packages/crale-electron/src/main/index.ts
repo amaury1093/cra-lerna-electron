@@ -1,11 +1,11 @@
 import { app, BrowserWindow } from 'electron';
-import path from 'path';
-import url from 'url';
+import * as path from 'path';
+import * as url from 'url';
 
-import staticPath from './utils/staticPath';
+import { staticPath } from './utils/staticPath';
 
 // Global reference to mainWindow (necessary to prevent window from being garbage collected)
-let mainWindow;
+let mainWindow: BrowserWindow | undefined;
 
 const createMainWindow = () => {
   // Create the browser window.
@@ -21,6 +21,10 @@ const createMainWindow = () => {
         slashes: true
       })
   );
+
+  mainWindow.on('closed', () => {
+    mainWindow = undefined;
+  });
 };
 
 // Quit application when all windows are closed
@@ -33,12 +37,12 @@ app.on('window-all-closed', () => {
 
 app.on('activate', () => {
   // On macOS it is common to re-create a window even after all windows have been closed
-  if (mainWindow === null) {
-    mainWindow = createMainWindow();
+  if (!mainWindow) {
+    createMainWindow();
   }
 });
 
 // Create main BrowserWindow when electron is ready
 app.on('ready', () => {
-  mainWindow = createMainWindow();
+  createMainWindow();
 });
