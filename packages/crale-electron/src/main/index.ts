@@ -4,6 +4,8 @@ import * as url from 'url';
 
 import { staticPath } from './utils/staticPath';
 
+const CRA_DEV_URL = 'http://localhost:3000';
+
 // Global reference to mainWindow (necessary to prevent window from being garbage collected)
 let mainWindow: BrowserWindow | undefined;
 
@@ -14,12 +16,13 @@ const createMainWindow = () => {
   // By default opens file:///path/to/crale-react/build/index.html, unless
   // there's a ENV variable set, which we will use for development.
   mainWindow.loadURL(
-    process.env.ELECTRON_START_URL ||
-      url.format({
-        pathname: path.join(staticPath, 'build', 'index.html'),
-        protocol: 'file:',
-        slashes: true
-      })
+    process.env.NODE_ENV === 'production'
+      ? url.format({
+          pathname: path.join(staticPath, 'build', 'index.html'),
+          protocol: 'file:',
+          slashes: true
+        })
+      : CRA_DEV_URL
   );
 
   mainWindow.on('closed', () => {
