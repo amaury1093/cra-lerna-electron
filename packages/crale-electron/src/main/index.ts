@@ -1,4 +1,4 @@
-import { app, BrowserWindow } from 'electron';
+import { app, BrowserWindow, ipcMain, IpcMainEvent } from 'electron';
 import * as path from 'path';
 import * as url from 'url';
 
@@ -6,17 +6,26 @@ import { staticPath } from './utils/staticPath';
 
 const CRA_DEV_URL = 'http://localhost:3000';
 
+const isProd = process.env.NODE_ENV === 'production';
+
 // Global reference to mainWindow (necessary to prevent window from being garbage collected)
 let mainWindow: BrowserWindow | undefined;
 
 const createMainWindow = () => {
   // Create the browser window.
-  mainWindow = new BrowserWindow({ width: 800, height: 600 });
+  mainWindow = new BrowserWindow({
+    width: 800,
+    height: 600,
+    webPreferences: {
+      nodeIntegration: true,
+      preload: path.join(staticPath, 'preload.js')
+    }
+  });
 
   // By default opens file:///path/to/crale-react/build/index.html, unless
   // there's a ENV variable set, which we will use for development.
   mainWindow.loadURL(
-    process.env.NODE_ENV === 'production'
+    isProd
       ? url.format({
           pathname: path.join(staticPath, 'build', 'index.html'),
           protocol: 'file:',
@@ -28,6 +37,8 @@ const createMainWindow = () => {
   mainWindow.on('closed', () => {
     mainWindow = undefined;
   });
+
+  if (!isProd) mainWindow?.webContents.openDevTools();
 };
 
 // Quit application when all windows are closed
@@ -48,4 +59,9 @@ app.on('activate', () => {
 // Create main BrowserWindow when electron is ready
 app.on('ready', () => {
   createMainWindow();
+});
+
+ipcMain.on('hello-electron', (event: IpcMainEvent, ...payload: any[]) => {
+  console.log('Hello react!');
+  console.log(payload);
 });

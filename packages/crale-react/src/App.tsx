@@ -3,6 +3,8 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
+import ipc from './ipc';
+
 function App() {
   return (
     <div className="App">
@@ -19,6 +21,17 @@ function App() {
         >
           Learn React
         </a>
+
+        <button
+          className="hello-electron mt-5"
+          onClick={() => {
+            ipc?.send('hello-electron', {
+              message: 'This is react!'
+            });
+          }}
+        >
+          Hi Electron!
+        </button>
       </header>
     </div>
   );
