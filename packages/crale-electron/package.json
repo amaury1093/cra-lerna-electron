@@ -10,7 +10,7 @@
     "build": "electron-webpack",
     "electron": "electron dist/main/main.js",
     "package": "electron-builder",
-    "start": "electron-webpack dev",
+    "start": "node ./scripts/start.js",
     "test": "echo Skipped."
   },
   "dependencies": {
