@@ -28,7 +28,7 @@
   },
   "dependencies": {
     "@types/react": "^16.9.32",
-    "@types/react-dom": "^16.9.5",
+    "@types/react-dom": "^16.9.6",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-scripts": "^3.4.1"
