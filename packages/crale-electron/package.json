@@ -20,7 +20,7 @@
     "copyfiles": "^2.2.0",
     "crale-react": "^0.1.0",
     "electron": "^8.2.5",
-    "electron-builder": "^22.5.1",
+    "electron-builder": "^22.6.0",
     "electron-webpack": "^2.8.2",
     "electron-webpack-ts": "^4.0.1",
     "webpack": "^4.43.0"
