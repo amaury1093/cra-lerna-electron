@@ -19,7 +19,7 @@
   "devDependencies": {
     "copyfiles": "^2.4.0",
     "crale-react": "^0.1.0",
-    "electron": "^10.1.2",
+    "electron": "^10.1.3",
     "electron-builder": "^22.8.1",
     "electron-webpack": "^2.8.2",
     "electron-webpack-ts": "^4.0.1",
