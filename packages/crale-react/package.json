@@ -34,6 +34,6 @@
     "react-scripts": "^4.0.1"
   },
   "devDependencies": {
-    "@types/jest": "^26.0.15"
+    "@types/jest": "^26.0.16"
   }
 }
