@@ -2,8 +2,8 @@
   "name": "cra-lerna-electron",
   "version": "0.1.0",
   "description": "Minimal starter kit: Create-React-App + Lerna + Electron starter kit",
-  "author": "Amaury Martiny <amaury.martiny@protonmail.com>",
-  "homepage": "https://github.com/amaurymartiny/cra-lerna-electron",
+  "author": "Amaury <amaurym10@protonmail.com>",
+  "homepage": "https://github.com/amaurym/cra-lerna-electron",
   "private": true,
   "workspaces": {
     "packages": [

@@ -6,7 +6,7 @@ Minimal starter kit: ⚛️ [`create-react-app`](https://github.com/facebook/c
 
 ```bash
 # Fetch this repo
-git clone https://github.com/amaurymartiny/cra-lerna-electron my-app
+git clone https://github.com/amaurym/cra-lerna-electron my-app
 cd my-app
 
 # Bootstrap the Lerna project, will install all modules
