@@ -2,7 +2,7 @@
   "name": "crale-react",
   "version": "0.1.0",
   "description": "Minimal starter kit: Create-React-App + Lerna + Electron starter kit",
-  "author": "Amaury Martiny <amaury.martiny@protonmail.com>",
+  "author": "Amaury <amaurym10@protonmail.com>",
   "homepage": "./",
   "private": true,
   "scripts": {
