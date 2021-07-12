@@ -23,7 +23,7 @@
     "electron-builder": "^22.10.5",
     "electron-webpack": "^2.8.2",
     "electron-webpack-ts": "^4.0.1",
-    "webpack": "^5.35.1"
+    "webpack": "^5.44.0"
   },
   "resolutions": {
     "webpack-sources": "^1.1.0"
