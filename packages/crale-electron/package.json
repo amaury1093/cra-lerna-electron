@@ -14,7 +14,7 @@
     "test": "echo Skipped."
   },
   "dependencies": {
-    "source-map-support": "^0.5.19"
+    "source-map-support": "^0.5.20"
   },
   "devDependencies": {
     "copyfiles": "^2.4.1",
